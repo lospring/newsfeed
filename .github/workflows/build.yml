@@ -37,7 +37,7 @@ jobs:
             --opml feeds.opml \
             --out public/feed.xml \
             --hours 24 \
-            --per-feed 8 \
+            --per-feed 4 \
             --limit 60 \
             --title "我的聚合早报"
 
