@@ -42,19 +42,6 @@ jobs:
             --limit 40 \
             --title "我的聚合早报"
 
-      - name: Merge Zaobao feed
-        run: |
-          python merge_feeds.py \
-            --opml feeds.opml \
-            --folder 联合早报 \
-            --out public/zaobao.xml \
-            --headlines \
-            --group-by-source \
-            --hours 24 \
-            --per-feed 5 \
-            --limit 10 \
-            --title "联合早报 每日十条"
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
