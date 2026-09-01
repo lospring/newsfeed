@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
   <head>
-    <title>Front Page Headlines</title>
+    <title>Daily Briefing Feeds</title>
   </head>
   <body>
 
-    <outline text="国际头版" title="国际头版">
+    <outline text="国际时政" title="国际时政">
       <outline text="BBC News" title="BBC News" type="rss"
                xmlUrl="https://feeds.bbci.co.uk/news/rss.xml"
                htmlUrl="https://www.bbc.com/news"/>
+      <outline text="BBC World" title="BBC World" type="rss"
+               xmlUrl="https://feeds.bbci.co.uk/news/world/rss.xml"
+               htmlUrl="https://www.bbc.com/news/world"/>
       <outline text="The Guardian" title="The Guardian" type="rss"
-               xmlUrl="https://www.theguardian.com/international/rss"
-               htmlUrl="https://www.theguardian.com/international"/>
+               xmlUrl="https://www.theguardian.com/world/rss"
+               htmlUrl="https://www.theguardian.com/world"/>
       <outline text="The New York Times" title="The New York Times" type="rss"
                xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
                htmlUrl="https://www.nytimes.com"/>
+      <outline text="NYT World" title="NYT World" type="rss"
+               xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+               htmlUrl="https://www.nytimes.com/section/world"/>
       <outline text="Washington Post" title="Washington Post" type="rss"
                xmlUrl="https://feeds.washingtonpost.com/rss/world"
                htmlUrl="https://www.washingtonpost.com/world/"/>
-      <outline text="CNN" title="CNN" type="rss"
-               xmlUrl="http://rss.cnn.com/rss/edition.rss"
-               htmlUrl="https://edition.cnn.com"/>
       <outline text="NPR" title="NPR" type="rss"
                xmlUrl="https://feeds.npr.org/1001/rss.xml"
                htmlUrl="https://www.npr.org"/>
+      <outline text="CNN" title="CNN" type="rss"
+               xmlUrl="http://rss.cnn.com/rss/edition.rss"
+               htmlUrl="https://edition.cnn.com"/>
       <outline text="Al Jazeera" title="Al Jazeera" type="rss"
                xmlUrl="https://www.aljazeera.com/xml/rss/all.xml"
                htmlUrl="https://www.aljazeera.com"/>
@@ -39,18 +45,6 @@
       <outline text="Financial Times" title="Financial Times" type="rss"
                xmlUrl="https://www.ft.com/rss/home"
                htmlUrl="https://www.ft.com"/>
-    </outline>
-
-    <outline text="跨媒体聚合" title="跨媒体聚合">
-      <outline text="Google News 中文" title="Google News 中文" type="rss"
-               xmlUrl="https://news.google.com/rss?hl=zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans"
-               htmlUrl="https://news.google.com"/>
-      <outline text="Google News English" title="Google News English" type="rss"
-               xmlUrl="https://news.google.com/rss?hl=en-US&amp;gl=US&amp;ceid=US:en"
-               htmlUrl="https://news.google.com"/>
-      <outline text="Techmeme" title="Techmeme" type="rss"
-               xmlUrl="https://www.techmeme.com/feed.xml"
-               htmlUrl="https://www.techmeme.com"/>
     </outline>
 
     <outline text="中文时政" title="中文时政">
@@ -72,18 +66,12 @@
       <outline text="Ars Technica" title="Ars Technica" type="rss"
                xmlUrl="https://feeds.arstechnica.com/arstechnica/index"
                htmlUrl="https://arstechnica.com"/>
+      <outline text="TechCrunch" title="TechCrunch" type="rss"
+               xmlUrl="https://techcrunch.com/feed/"
+               htmlUrl="https://techcrunch.com"/>
       <outline text="MIT Technology Review" title="MIT Technology Review" type="rss"
                xmlUrl="https://www.technologyreview.com/feed/"
                htmlUrl="https://www.technologyreview.com"/>
-    </outline>
-
-    <outline text="联合早报" title="联合早报">
-      <outline text="早报 国际" title="早报 国际" type="rss"
-               xmlUrl="https://rsshub.app/zaobao/realtime/world"
-               htmlUrl="https://www.zaobao.com/realtime/world"/>
-      <outline text="早报 中国" title="早报 中国" type="rss"
-               xmlUrl="https://rsshub.app/zaobao/realtime/china"
-               htmlUrl="https://www.zaobao.com/realtime/china"/>
     </outline>
 
   </body>

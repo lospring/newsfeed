@@ -15,7 +15,6 @@ import sys
 import time
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
-from itertools import zip_longest
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
 from pathlib import Path
@@ -146,10 +145,6 @@ def main():
     ap.add_argument("--hours", type=int, default=48, help="只保留最近 N 小时的条目")
     ap.add_argument("--per-feed", type=int, default=10, help="每个源最多取几条")
     ap.add_argument("--limit", type=int, default=120, help="总共最多输出几条")
-    ap.add_argument("--headlines", action="store_true",
-                    help="头条模式：保留各源原始排序，并按源轮流交错输出")
-    ap.add_argument("--group-by-source", action="store_true",
-                    help="头条模式下不交错，同一个源的条目连在一起输出")
     ap.add_argument("--title", default="我的聚合早报")
     ap.add_argument("--self-link", default="", help="发布后的页面地址，可留空")
     args = ap.parse_args()
@@ -164,23 +159,11 @@ def main():
         results = list(pool.map(fetch, sources))
 
     # 每个源限流，避免某一家刷屏
-    batches = []
+    items = []
     for batch in results:
-        if not args.headlines:
-            # 默认按时间重排，最新的在前
-            batch.sort(
-                key=lambda x: x["time"] or datetime.min.replace(tzinfo=timezone.utc),
-                reverse=True,
-            )
-        # headlines 模式下保留源自身的排序（首页/头条源的第一条就是当天主打）
-        batches.append(batch[: args.per_feed])
-
-    if args.headlines and not args.group_by_source:
-        # 轮流交错：先各家第一条，再各家第二条，以此类推
-        items = [item for row in zip_longest(*batches) for item in row if item]
-    else:
-        # 按 OPML 里的源顺序整块拼接
-        items = [item for batch in batches for item in batch]
+        batch.sort(key=lambda x: x["time"] or datetime.min.replace(tzinfo=timezone.utc),
+                   reverse=True)
+        items.extend(batch[: args.per_feed])
 
     # 时间窗口过滤；没有时间戳的条目保留
     if args.hours:
@@ -196,11 +179,8 @@ def main():
         seen.add(item["link"])
         deduped.append(item)
 
-    if not args.headlines:
-        deduped.sort(
-            key=lambda x: x["time"] or datetime.min.replace(tzinfo=timezone.utc),
-            reverse=True,
-        )
+    deduped.sort(key=lambda x: x["time"] or datetime.min.replace(tzinfo=timezone.utc),
+                 reverse=True)
     deduped = deduped[: args.limit]
 
     out = Path(args.out)
