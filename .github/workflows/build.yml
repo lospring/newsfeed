@@ -16,7 +16,8 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  # Pages 部署不能中途掐断，否则后一次构建会把前一次的部署取消掉
+  cancel-in-progress: false
 
 jobs:
   build:
