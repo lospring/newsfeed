@@ -36,9 +36,10 @@ jobs:
           python merge_feeds.py \
             --opml feeds.opml \
             --out public/feed.xml \
+            --headlines \
             --hours 24 \
-            --per-feed 4 \
-            --limit 60 \
+            --per-feed 2 \
+            --limit 40 \
             --title "我的聚合早报"
 
       - name: Upload artifact
