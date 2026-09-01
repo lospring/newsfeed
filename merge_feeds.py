@@ -148,6 +148,8 @@ def main():
     ap.add_argument("--limit", type=int, default=120, help="总共最多输出几条")
     ap.add_argument("--headlines", action="store_true",
                     help="头条模式：保留各源原始排序，并按源轮流交错输出")
+    ap.add_argument("--group-by-source", action="store_true",
+                    help="头条模式下不交错，同一个源的条目连在一起输出")
     ap.add_argument("--title", default="我的聚合早报")
     ap.add_argument("--self-link", default="", help="发布后的页面地址，可留空")
     args = ap.parse_args()
@@ -173,10 +175,11 @@ def main():
         # headlines 模式下保留源自身的排序（首页/头条源的第一条就是当天主打）
         batches.append(batch[: args.per_feed])
 
-    if args.headlines:
+    if args.headlines and not args.group_by_source:
         # 轮流交错：先各家第一条，再各家第二条，以此类推
         items = [item for row in zip_longest(*batches) for item in row if item]
     else:
+        # 按 OPML 里的源顺序整块拼接
         items = [item for batch in batches for item in batch]
 
     # 时间窗口过滤；没有时间戳的条目保留

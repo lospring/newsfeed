@@ -77,5 +77,14 @@
                htmlUrl="https://www.technologyreview.com"/>
     </outline>
 
+    <outline text="联合早报" title="联合早报">
+      <outline text="早报 国际" title="早报 国际" type="rss"
+               xmlUrl="https://rsshub.app/zaobao/realtime/world"
+               htmlUrl="https://www.zaobao.com/realtime/world"/>
+      <outline text="早报 中国" title="早报 中国" type="rss"
+               xmlUrl="https://rsshub.app/zaobao/realtime/china"
+               htmlUrl="https://www.zaobao.com/realtime/china"/>
+    </outline>
+
   </body>
 </opml>
