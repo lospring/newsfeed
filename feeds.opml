@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
   <head>
-    <title>Curated News &amp; Creative Feeds</title>
+    <title>Daily Briefing Feeds</title>
   </head>
   <body>
 
-    <outline text="国际新闻" title="国际新闻">
+    <outline text="国际时政" title="国际时政">
       <outline text="BBC News" title="BBC News" type="rss"
                xmlUrl="https://feeds.bbci.co.uk/news/rss.xml"
                htmlUrl="https://www.bbc.com/news"/>
-      <outline text="BBC News / World" title="BBC News / World" type="rss"
+      <outline text="BBC World" title="BBC World" type="rss"
                xmlUrl="https://feeds.bbci.co.uk/news/world/rss.xml"
                htmlUrl="https://www.bbc.com/news/world"/>
-      <outline text="The Guardian / World" title="The Guardian / World" type="rss"
+      <outline text="The Guardian" title="The Guardian" type="rss"
                xmlUrl="https://www.theguardian.com/world/rss"
                htmlUrl="https://www.theguardian.com/world"/>
       <outline text="The New York Times" title="The New York Times" type="rss"
                xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
                htmlUrl="https://www.nytimes.com"/>
-      <outline text="NYT / World" title="NYT / World" type="rss"
+      <outline text="NYT World" title="NYT World" type="rss"
                xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
                htmlUrl="https://www.nytimes.com/section/world"/>
-      <outline text="NPR News" title="NPR News" type="rss"
+      <outline text="Washington Post" title="Washington Post" type="rss"
+               xmlUrl="https://feeds.washingtonpost.com/rss/world"
+               htmlUrl="https://www.washingtonpost.com/world/"/>
+      <outline text="NPR" title="NPR" type="rss"
                xmlUrl="https://feeds.npr.org/1001/rss.xml"
                htmlUrl="https://www.npr.org"/>
+      <outline text="CNN" title="CNN" type="rss"
+               xmlUrl="http://rss.cnn.com/rss/edition.rss"
+               htmlUrl="https://edition.cnn.com"/>
       <outline text="Al Jazeera" title="Al Jazeera" type="rss"
                xmlUrl="https://www.aljazeera.com/xml/rss/all.xml"
                htmlUrl="https://www.aljazeera.com"/>
@@ -33,81 +39,39 @@
       <outline text="France 24" title="France 24" type="rss"
                xmlUrl="https://www.france24.com/en/rss"
                htmlUrl="https://www.france24.com"/>
+      <outline text="Sky News" title="Sky News" type="rss"
+               xmlUrl="https://feeds.skynews.com/feeds/rss/world.xml"
+               htmlUrl="https://news.sky.com/world"/>
+      <outline text="Financial Times" title="Financial Times" type="rss"
+               xmlUrl="https://www.ft.com/rss/home"
+               htmlUrl="https://www.ft.com"/>
     </outline>
 
-    <outline text="中文资讯" title="中文资讯">
-      <outline text="人民网 / 时政" title="人民网 / 时政" type="rss"
+    <outline text="中文时政" title="中文时政">
+      <outline text="人民网 时政" title="人民网 时政" type="rss"
                xmlUrl="http://www.people.com.cn/rss/politics.xml"
                htmlUrl="http://politics.people.com.cn"/>
-      <outline text="人民网 / 国际" title="人民网 / 国际" type="rss"
+      <outline text="人民网 国际" title="人民网 国际" type="rss"
                xmlUrl="http://www.people.com.cn/rss/world.xml"
                htmlUrl="http://world.people.com.cn"/>
-      <outline text="36氪" title="36氪" type="rss"
-               xmlUrl="https://36kr.com/feed"
-               htmlUrl="https://36kr.com"/>
-      <outline text="少数派" title="少数派" type="rss"
-               xmlUrl="https://sspai.com/feed"
-               htmlUrl="https://sspai.com"/>
-      <outline text="Solidot 奇客的资讯" title="Solidot 奇客的资讯" type="rss"
-               xmlUrl="https://www.solidot.org/index.rss"
-               htmlUrl="https://www.solidot.org"/>
-      <outline text="澎湃新闻 / 推荐 (RSSHub)" title="澎湃新闻 / 推荐 (RSSHub)" type="rss"
+      <outline text="澎湃新闻" title="澎湃新闻" type="rss"
                xmlUrl="https://rsshub.app/thepaper/featured"
                htmlUrl="https://www.thepaper.cn"/>
     </outline>
 
-    <outline text="影视与创作" title="影视与创作">
-      <outline text="No Film School" title="No Film School" type="rss"
-               xmlUrl="https://nofilmschool.com/rss.xml"
-               htmlUrl="https://nofilmschool.com"/>
-      <outline text="Filmmaker Magazine" title="Filmmaker Magazine" type="rss"
-               xmlUrl="https://filmmakermagazine.com/feed/"
-               htmlUrl="https://filmmakermagazine.com"/>
-      <outline text="IndieWire" title="IndieWire" type="rss"
-               xmlUrl="https://www.indiewire.com/feed/"
-               htmlUrl="https://www.indiewire.com"/>
-      <outline text="Variety" title="Variety" type="rss"
-               xmlUrl="https://variety.com/feed/"
-               htmlUrl="https://variety.com"/>
-      <outline text="The Hollywood Reporter" title="The Hollywood Reporter" type="rss"
-               xmlUrl="https://www.hollywoodreporter.com/feed/"
-               htmlUrl="https://www.hollywoodreporter.com"/>
-      <outline text="Colossal" title="Colossal" type="rss"
-               xmlUrl="https://www.thisiscolossal.com/feed/"
-               htmlUrl="https://www.thisiscolossal.com"/>
-      <outline text="Aeon" title="Aeon" type="rss"
-               xmlUrl="https://aeon.co/feed.rss"
-               htmlUrl="https://aeon.co"/>
-    </outline>
-
-    <outline text="AI 与科技" title="AI 与科技">
-      <outline text="Hacker News" title="Hacker News" type="rss"
-               xmlUrl="https://news.ycombinator.com/rss"
-               htmlUrl="https://news.ycombinator.com"/>
-      <outline text="Ars Technica" title="Ars Technica" type="rss"
-               xmlUrl="https://feeds.arstechnica.com/arstechnica/index"
-               htmlUrl="https://arstechnica.com"/>
+    <outline text="科技" title="科技">
       <outline text="The Verge" title="The Verge" type="rss"
                xmlUrl="https://www.theverge.com/rss/index.xml"
                htmlUrl="https://www.theverge.com"/>
+      <outline text="Ars Technica" title="Ars Technica" type="rss"
+               xmlUrl="https://feeds.arstechnica.com/arstechnica/index"
+               htmlUrl="https://arstechnica.com"/>
       <outline text="TechCrunch" title="TechCrunch" type="rss"
                xmlUrl="https://techcrunch.com/feed/"
                htmlUrl="https://techcrunch.com"/>
       <outline text="MIT Technology Review" title="MIT Technology Review" type="rss"
                xmlUrl="https://www.technologyreview.com/feed/"
                htmlUrl="https://www.technologyreview.com"/>
-      <outline text="OpenAI News" title="OpenAI News" type="rss"
-               xmlUrl="https://openai.com/news/rss.xml"
-               htmlUrl="https://openai.com/news"/>
-      <outline text="Google DeepMind Blog" title="Google DeepMind Blog" type="rss"
-               xmlUrl="https://deepmind.google/blog/rss.xml"
-               htmlUrl="https://deepmind.google/discover/blog"/>
-      <outline text="Hugging Face Blog" title="Hugging Face Blog" type="rss"
-               xmlUrl="https://huggingface.co/blog/feed.xml"
-               htmlUrl="https://huggingface.co/blog"/>
-      <outline text="arXiv cs.CV (计算机视觉)" title="arXiv cs.CV" type="rss"
-               xmlUrl="http://arxiv.org/rss/cs.CV"
-               htmlUrl="https://arxiv.org/list/cs.CV/recent"/>
     </outline>
 
   </body>
